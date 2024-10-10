@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicla Mais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            margin-right: 10px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        header nav ul li {
+            display: inline;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        header .login {
+            cursor: pointer;
+            background-color: #fff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        /* Banner styles */
+        .hero {
+            background-image: url('family-recycling.jpg'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .hero button {
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero .cta {
+            background-color: #FFA500;
+            color: white;
+        }
+        .hero .secondary {
+            background-color: #4CAF50;
+            color: white;
+        }
+        /* Seções */
+        section {
+            padding: 50px 20px;
+        }
+        .como-funciona, .conscientizacao, .depoimentos, .blog, footer {
+            text-align: center;
+        }
+        .como-funciona h2, .conscientizacao h2, .depoimentos h2, .blog h2 {
+            margin-bottom: 30px;
+        }
+        .como-funciona .steps {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .como-funciona .steps div {
+            max-width: 200px;
+        }
+        .steps img {
+            width: 50px;
+            height: 50px;
+        }
+        .blog img {
+            width: 50px;
+            height: 50px;
+        }
+        .blog .posts {
+            display: flex;
+            justify-content: space-around;
+        }
+        .posts .post {
+            max-width: 200px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        footer .social {
+            margin: 20px 0;
+        }
+        footer .social img {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        footer .newsletter {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="Recicla Mais.png" alt="Logo" width="40">
+            Recicla Mais
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#agende">Agende Sua Coleta</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="login" onclick="toggleLogin()">Entrar / Cadastrar-se</div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h1>Recicle Hoje, Transforme o Amanhã!</h1>
+        <p>Agende a coleta dos seus resíduos recicláveis e ajude a manter o nosso bairro limpo e sustentável.</p>
+        <button class="cta" onclick="window.location.href='#agende'">Agende Sua Coleta</button>
+        <button class="secondary" onclick="window.location.href='#como-funciona'">Saiba Mais</button>
+        <p>Este é um projeto com fins educacionais de John Lenon Barbosa Fortes RU 4343447</p>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="como-funciona" id="como-funciona">
+        <h2>Como Funciona o Recicla Mais?</h2>
+        <p>Em 3 passos simples, você pode contribuir para um futuro mais verde: Cadastre-se, Agende sua Coleta e Destine corretamente seus resíduos recicláveis!</p>
+        <div class="steps">
+            <div>
+                <img src="icon-cadastro.png" alt="Cadastro">
+                <p>Crie sua conta e entre para a nossa comunidade de recicladores.</p>
+            </div>
+            <div>
+                <img src="icon-agendamento.png" alt="Agendamento">
+                <p>Escolha uma data e horário que funcionem para você e agende sua coleta.</p>
+            </div>
+            <div>
+                <img src="icon-destinacao.png" alt="Destinação">
+                <p>Nossa equipe ou cooperativas parceiras coletarão os resíduos e os levarão ao local adequado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Conscientização Ambiental -->
+    <section class="conscientizacao">
+        <h2>Por que Reciclar é Importante?</h2>
+        <p>A reciclagem contribui para a preservação dos recursos naturais, reduz o impacto ambiental e ajuda a criar um ambiente mais saudável para todos nós.</p>
+        <!-- Estatísticas podem ser adicionadas aqui -->
+        <button onclick="window.location.href='#blog'">Saiba mais sobre a reciclagem</button>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="depoimentos">
+        <h2>O que dizem nossos usuários?</h2>
+        <div>
+            <p>"Com o Recicla Mais, fica muito mais fácil fazer minha parte para o meio ambiente!" — Joana</p>
+            <p>"Aumentamos nossa eficiência com o sistema de rotas sugerido." — Cooperativa VerdeVida</p>
+        </div>
+    </section>
+
+    <!-- Seção de Blog -->
+    <section class="blog">
+        <h2>Dicas e Novidades</h2>
+        <div class="posts">
+            <div class="post">
+                <img src="post.png" alt="Post 1">
+                <p>Como separar o lixo reciclável em casa</p>
+            </div>
+            <div class="post">
+                <img src="post.png" alt="Post 2">
+                <p>Conheça os tipos de materiais que podem ser reciclados</p>
+            </div>
+            <div class="post">
+                <img src="post.png" alt="Post 3">
+                <p>Impactos positivos da reciclagem no seu bairro</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Recicla Mais</p>
+        
+        <div class="newsletter">
+            <input type="email" placeholder="Receba nossas novidades sobre reciclagem">
+            <button>Inscrever-se</button>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLogin() {
+            alert('Função de login/cadastro em breve!');
+        }
+    </script>
+
+</body>
+</html>
